@@ -1,9 +1,103 @@
-.card{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    /* width: 80%; */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.icon{
+    font-size: 2rem;
+    width: 65px;
+}
+
+.title{
+    margin-right: 7rem;
+}
+
+#phones{
+    margin-top: -7rem;
+}
+#phones img{
     margin: 0 auto;
-    border: 1px solid tomato;
+    width: 80%;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+.loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+.album {
+    padding: 8vw 0;
+}
+
+#phones .card {
+    border-radius: 10px;
+    overflow: hidden;
+    /* box-shadow: 2px 2px 10px rgb(236, 236, 236); */
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    border: 0;
+}
+
+.details-btn{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.modal .modal-title {
     border-radius: 5px;
-    padding: 10px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.modal img {
+    /* height: 320px; */
+    width: 50%;
+    margin: 0 25%;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.modal p {
+    font-size: 16px;
+}
+
+@media screen and (max-width: 490px) {
+	#phones{
+        margin-top: 0.1rem;
+    }
+    
+}
+@media screen and (min-width: 576px) {
+    #phones{
+        margin-top: -3rem;
+    }
+    .title{
+        font-size: 2rem;
+        margin-left: -16rem;
+    }
+}
+@media screen and (min-width: 992px) {
+    #phones{
+        margin-top: -8rem;
+    }
+    .title{
+        font-size: 2rem;
+        margin-left: -36rem;
+    }
 }
