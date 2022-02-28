@@ -11,7 +11,10 @@ const loadPhones = () => {
 
     searchField.value = '';
     if (searchText == '') {
-        alert('Please input phone name first')
+        Swal.fire({
+            text: 'Please input a phone name first',
+            icon: 'warning',
+        });
     }
     else {
         const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
@@ -22,14 +25,17 @@ const loadPhones = () => {
     }
 }
 
-// Display Cocktails
+// Display phones
 const displaySearchResult = phones => {
     // console.log(phones);
     const productContainer = document.getElementById('phones');
-    // searchResult.innerHTML = '';
+    // productContainer.innerHTML = '';
     productContainer.textContent = '';
     if (phones.length == 0) {
-        alert('no result found');
+        Swal.fire({
+            text: 'No result found!',
+            icon: 'error',
+        });
     }
     const arr = phones;
     arr?.map(phone => {
@@ -68,6 +74,7 @@ const singleProduct = async (id) => {
     document.getElementById('display-size').innerText = 'Display Size: ' + mainFeatures.displaySize;
     document.getElementById('memory').innerText = 'Memory: ' + mainFeatures.memory;
     document.getElementById('storage').innerText = 'Storage: ' + mainFeatures.storage;
+    document.getElementById('sensors').innerText = 'Sensors: ' + mainFeatures.sensors;
 
     // Hide Preloader
     document.querySelector('.loading').style.opacity = '0';
