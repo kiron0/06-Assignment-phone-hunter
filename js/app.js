@@ -1,3 +1,10 @@
+// add event listener on enter button
+document.getElementById('search-field').addEventListener("keypress", function (event) {
+    if (event.key == 'Enter') {
+      document.getElementById('search-btn').click()
+    };
+  });
+
 const loadPhones = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
