@@ -37,18 +37,19 @@ const displaySearchResult = phones => {
             icon: 'error',
         });
     }
+
     const arr = phones;
     arr?.map(phone => {
-        let { slug, image, phone_name } = phone;
+        let { slug, image, phone_name, brand } = phone;
         const div = document.createElement('div');
         div.classList.add('col');
         div.innerHTML = `
         <div class="card shadow-none">
             <img src="${image}" />
             <p class="text-center mb-1 mt-3">${phone_name}</p>
+            <p class="text-center mb-2 mt-1">${brand}</p>
             <button onclick="singleProduct('${slug}')" class="btn btn-primary details-btn" data-bs-toggle="modal" data-bs-target="#single">Details</button>
         </div>`;
-
         productContainer.appendChild(div);
     });
 }
