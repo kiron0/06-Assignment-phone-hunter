@@ -111,14 +111,6 @@
     text-decoration: none;
 }
 
-
-.footer-text:hover{
-    background-color: rgb(206, 204, 204);
-    color: black;
-    border-radius: 5px;
-    padding: 1rem;
-}
-
 /*----------------------- Responsive Breakpoints ---------------------------*/
 @media screen and (max-width: 490px) {
 	#phones{
