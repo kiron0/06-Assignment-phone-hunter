@@ -81,10 +81,10 @@ const singleProduct = async (id) => {
     document.querySelector('.modal-title').innerText = name;
     document.querySelector('.modal-body img').src = image;
     document.getElementById('release-date').innerText = `${releaseDate ? releaseDate : "Release Date is not found"}`;
-    document.getElementById('chipset').innerText = `Chipset: ${mainFeatures.chipSet}`;
-    document.getElementById('display-size').innerText = `Display Size: ${mainFeatures.displaySize}`;
-    document.getElementById('memory').innerText = `Memory: ${mainFeatures.memory}`;
-    document.getElementById('storage').innerText = `Storage: ${mainFeatures.storage}`;
+    document.getElementById('chipset').innerText = `Chipset: ${mainFeatures.chipSet ? mainFeatures.chipSet : "not available"}`;
+    document.getElementById('display-size').innerText = `Display Size: ${mainFeatures.displaySize ? mainFeatures.displaySize : "not available"}`;
+    document.getElementById('memory').innerText = `Memory: ${mainFeatures.memory ? mainFeatures.memory : "not available"}`;
+    document.getElementById('storage').innerText = `Storage: ${mainFeatures.storage ? mainFeatures.storage : "not available"}`;
     document.getElementById('sensors').innerText = `Sensors: ${mainFeatures.sensors.map((x) => x + " ")}`;
     document.getElementById('bluetooth').innerText = `Bluetooth: ${others?.Bluetooth ? others.Bluetooth : "not available"}`;
     document.getElementById('gps').innerText = `GPS: ${others?.GPS ? others.GPS : "not available"}`;
