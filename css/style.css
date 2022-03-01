@@ -118,6 +118,9 @@ input[type="text"] {
         width: 30%;
         margin: 0 30%;
     }
+    .modal p {
+        font-size: 15px;
+    }
 
     /* .icon{
         width: -.5rem;
