@@ -5,6 +5,7 @@ document.getElementById('search-field').addEventListener("keypress", function (e
     };
 });
 
+// show phones on when website loaded
 const loadPhones = () => {
     fetch('https://openapi.programming-hero.com/api/phones?search=iphone')
         .then(res => res.json())
@@ -12,10 +13,12 @@ const loadPhones = () => {
 }
 loadPhones();
 
+// search phones
 const searchPhones = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
 
+    // clear input field
     searchField.value = '';
     if (searchText == '') {
         Swal.fire({

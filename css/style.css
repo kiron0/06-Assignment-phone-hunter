@@ -1,3 +1,4 @@
+/* link google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600&display=swap');
 
 * {
@@ -15,14 +16,37 @@
     margin-right: 7rem;
 }
 
-.input-group{
-    width: 60%;
-}
-
 /* input[type="text"] {
     text-transform: lowercase;
   } */
 
+.input-group{
+    width: 60%;
+}
+
+.navbar-toggler:focus {
+    text-decoration: none;
+    outline: 0;
+    box-shadow: none;
+}
+
+/* spinner style */
+.loading {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s;
+}
+
+.album {
+    padding: 8vw 0;
+}
+
+/* input section style */
 #search-field{
     padding: .6rem;
     border: 0;
@@ -38,33 +62,14 @@
     cursor: pointer;
 }
 
+/* display phones section */
 #phones{
     margin-top: -7rem;
 }
+
 #phones img{
     margin: 0 auto;
     width: 80%;
-}
-
-.navbar-toggler:focus {
-    text-decoration: none;
-    outline: 0;
-    box-shadow: none;
-}
-
-.loading {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: opacity 0.5s;
-}
-
-.album {
-    padding: 8vw 0;
 }
 
 #phones .card {
@@ -82,6 +87,7 @@
     margin: 0 auto;
 }
 
+/* modal section style */
 .modal .modal-title {
     border-radius: 5px;
     font-size: 1.5rem;
@@ -100,6 +106,20 @@
     font-size: 16px;
 }
 
+/* footer section style */
+.footer-text{
+    text-decoration: none;
+}
+
+
+.footer-text:hover{
+    background-color: rgb(206, 204, 204);
+    color: black;
+    border-radius: 5px;
+    padding: 1rem;
+}
+
+/*----------------------- Responsive Breakpoints ---------------------------*/
 @media screen and (max-width: 490px) {
 	#phones{
         margin-top: .1rem;
@@ -137,6 +157,7 @@
     }
     
 }
+
 @media screen and (min-width: 576px) {
     #phones{
         margin-top: -3rem;
@@ -146,6 +167,7 @@
         margin-left: -16rem;
     }
 }
+
 @media screen and (min-width: 992px) {
     #phones{
         margin-top: -8rem;
