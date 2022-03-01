@@ -55,7 +55,7 @@
             <div class="input-group mb-3 mx-auto my-5 search-input">
                 <input id="search-field" type="text" class="form-control" placeholder="Search your phone..."
                     aria-label="" aria-describedby="button-addon2">
-                <button id="search-btn" onclick="loadPhones()" class="btn btn-outline-secondary" type="button"
+                <button id="search-btn" onclick="searchPhones()" class="btn btn-outline-secondary" type="button"
                     id="button-addon2">Search</button>
             </div>
         </div>
@@ -77,12 +77,20 @@
                     </div>
                     <div class="modal-body">
                         <img class="mb-3" src="" />
-                        <p id="release-date" class="text-muted mb-0"></p>
+                        <p id="release-date" class="fs-5 mt-1 text-center"></p>
+                        <h5 class="text-center">Main Features</h5>
                         <p id="chipset" class="text-muted mb-0"></p>
                         <p id="display-size" class="text-muted mb-0"></p>
                         <p id="memory" class="text-muted mb-0"></p>
                         <p id="storage" class="text-muted mb-0"></p>
                         <p id="sensors" class="text-muted mb-0 d-block"></p>
+                        <h5 class="text-center">Others Features</h5>
+                        <p id="bluetooth" class="text-muted mb-0"></p>
+                        <p id="gps" class="text-muted mb-0"></p>
+                        <p id="nfc" class="text-muted mb-0"></p>
+                        <p id="radio" class="text-muted mb-0"></p>
+                        <p id="usb" class="text-muted mb-0"></p>
+                        <p id="wlan" class="text-muted mb-0"></p>
                     </div>
                     <div class="loading">
                         <div class="d-flex justify-content-center">
