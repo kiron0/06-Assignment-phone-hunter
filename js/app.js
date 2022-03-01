@@ -19,7 +19,7 @@ const searchPhones = () => {
     searchField.value = '';
     if (searchText == '') {
         Swal.fire({
-            text: 'Please input a phone name first',
+            text: 'Please type a phone name first...',
             icon: 'warning',
         });
     }

@@ -8,7 +8,7 @@
 
 .icon{
     font-size: 2rem;
-    width: 65px;
+    width: 75px;
 }
 
 .title{
@@ -19,9 +19,9 @@
     width: 60%;
 }
 
-input[type="text"] {
+/* input[type="text"] {
     text-transform: lowercase;
-  }
+  } */
 
 #search-field{
     padding: .6rem;
@@ -100,17 +100,21 @@ input[type="text"] {
     font-size: 16px;
 }
 
-
 @media screen and (max-width: 490px) {
 	#phones{
-        margin-top: 0.1rem;
+        margin-top: .1rem;
     }
     .input-group{
         width: 90%;
     }
 
+    .icon{
+        width: 60px;
+    }
+
     .title{
-        margin-left: -2.5rem;
+        font-size: 1.2rem;
+        margin-left: -0.5rem;
     }
 
     .modal img {
@@ -122,9 +126,15 @@ input[type="text"] {
         font-size: 15px;
     }
 
-    /* .icon{
-        width: -.5rem;
-    } */
+    #phones img{
+        margin: 0 auto;
+        width: 60%;
+    }
+
+    #phones .card{
+        width: 75%;
+        margin: 0 auto;
+    }
     
 }
 @media screen and (min-width: 576px) {
@@ -141,10 +151,11 @@ input[type="text"] {
         margin-top: -8rem;
     }
     .title{
-        font-size: 2rem;
+        font-size: 1.7rem;
         margin-left: -36rem;
     }
     #search-field{
+        font-size: 1.1rem;
         padding: 1rem;
         border: 0;
         outline: 0;
