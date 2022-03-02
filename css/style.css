@@ -111,6 +111,12 @@
     text-decoration: none;
 }
 
+#show-all{
+    margin-left: 50%;
+    margin-bottom: 2rem;
+    margin-top: -8rem;
+}
+
 /*----------------------- Responsive Breakpoints ---------------------------*/
 @media screen and (max-width: 490px) {
 	#phones{
@@ -147,16 +153,31 @@
         width: 75%;
         margin: 0 auto;
     }
+
+    #show-all{
+        margin-left: 40%;
+        margin-top: 1.5rem;
+    }
     
 }
 
 @media screen and (min-width: 576px) {
+
+    /* .input-group{
+        width: 90%;
+    } */
+
     #phones{
         margin-top: -3rem;
     }
     .title{
         font-size: 2rem;
-        margin-left: -16rem;
+        margin-left: -14rem;
+    }
+
+    #show-all{
+        margin-left: 45%;
+        margin-top: 1.5rem;
     }
 }
 
@@ -181,5 +202,10 @@
         border: 0;
         color: #fff;
         cursor: pointer;
+    }
+
+    #show-all{
+        margin-left: 50%;
+        margin-top: -6rem;
     }
 }

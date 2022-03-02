@@ -1,3 +1,6 @@
+document.getElementById('show-all').style.display = 'none';
+
+
 // add event listener on enter button
 document.getElementById('search-field').addEventListener("keypress", function (event) {
     if (event.key == 'Enter') {
@@ -18,8 +21,6 @@ const searchPhones = () => {
     const searchField = document.getElementById('search-field');
     const searchText = searchField.value;
 
-    // clear input field
-    searchField.value = '';
     if (searchText == '') {
         Swal.fire({
             text: 'Please type a phone name first...',
@@ -39,7 +40,7 @@ const searchPhones = () => {
 const displaySearchResult = phones => {
     // console.log(phones);
     const productContainer = document.getElementById('phones');
-    // productContainer.innerHTML = '';
+
     productContainer.textContent = '';
     if (phones.length == 0) {
         Swal.fire({
@@ -47,9 +48,20 @@ const displaySearchResult = phones => {
             icon: 'error',
         });
     }
+    else if (phones.length >= 20) {
+        document.getElementById('show-all').style.display = 'block';
+        let searchField = document.getElementById('search-field');
+        let searchText = searchField.value;
+        document.getElementById('show-all').addEventListener('click', function () {
+            const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
+            fetch(url).then(res => res.json()).then(data => displaySearchResult(data.data))
+        });
+        // clear input field
+        searchField.value = '';
+    }
 
-    const arr = phones;
-    arr?.map(phone => {
+    const showPhones = phones;
+    showPhones?.map(phone => {
         let { slug, image, phone_name, brand } = phone;
         const div = document.createElement('div');
         div.classList.add('col');
@@ -62,6 +74,10 @@ const displaySearchResult = phones => {
         </div>`;
         productContainer.appendChild(div);
     });
+}
+
+const showAllPhones = () => {
+
 }
 
 // Call API and Display Details
@@ -99,3 +115,5 @@ const singleProduct = async (id) => {
         document.querySelector('.loading').style.display = 'none';
     }, 500);
 }
+
+// Phone jodi 20 er besi hoi tahole ekta button show koraben ar oitate addEventlistener dia Click function koren
