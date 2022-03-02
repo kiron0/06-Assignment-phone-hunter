@@ -119,8 +119,19 @@
 
 /*----------------------- Responsive Breakpoints ---------------------------*/
 @media screen and (max-width: 490px) {
+
+    .found-length{
+        margin-top: 2rem;
+        font-size: 1.2rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 	#phones{
-        margin-top: .1rem;
+        margin-top: -2.5rem;
+        /* margin-bottom: 2rem; */
     }
     .input-group{
         width: 90%;
@@ -167,6 +178,15 @@
         width: 90%;
     } */
 
+    .found-length{
+        margin-top: 2.5rem;
+        font-size: 1.5rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #phones{
         margin-top: -3rem;
     }
@@ -182,6 +202,15 @@
 }
 
 @media screen and (min-width: 992px) {
+
+    .found-length{
+        font-size: 1.5rem;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     #phones{
         margin-top: -8rem;
     }

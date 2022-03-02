@@ -1,5 +1,6 @@
-document.getElementById('show-all').style.display = 'none';
-
+const showButton = document.getElementById('show-all');
+showButton.style.display = 'none';
+// document.querySelector('found-div').style.display = 'none';
 
 // add event listener on enter button
 document.getElementById('search-field').addEventListener("keypress", function (event) {
@@ -49,7 +50,7 @@ const displaySearchResult = phones => {
         });
     }
     else if (phones.length >= 20) {
-        document.getElementById('show-all').style.display = 'block';
+        showButton.style.display = 'block';
         let searchField = document.getElementById('search-field');
         let searchText = searchField.value;
         document.getElementById('show-all').addEventListener('click', function () {
@@ -59,8 +60,10 @@ const displaySearchResult = phones => {
         // clear input field
         searchField.value = '';
     }
-
     const showPhones = phones;
+    document.getElementById('found-length').innerText = phones.length;
+
+
     showPhones?.map(phone => {
         let { slug, image, phone_name, brand } = phone;
         const div = document.createElement('div');
