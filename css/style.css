@@ -30,6 +30,10 @@
     box-shadow: none;
 }
 
+.navbar-toggler-icon{
+    background-image: url("../images/menu.svg") !important;
+  }
+
 /* spinner style */
 .loading {
     position: absolute;
